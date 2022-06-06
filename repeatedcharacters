@@ -1,0 +1,60 @@
+ Software Technical Skill Assessment
+ 
+The objective is to eliminate any duplicates in the given string S.
+The various ways for removing duplicates in a string are listed below.
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Write a javascript function to find the repeated character in the sentence, and exclude them all.
+ 
+        // JavaScript function to remove duplicate character
+        // from character array and print in sorted
+        // order
+        function removeDuplicate(str, n)
+            {
+                // Used as index in the modified string
+                var index = 0;
+         
+                // Traverse through all characters
+                for (var i = 0; i < n; i++)
+                {
+         
+                    // Check if str[i] is present before it
+                    var j;
+                    for (j = 0; j < i; j++)
+                    {
+                        if (str[i] == str[j])
+                        {
+                            break;
+                        }
+                    }
+         
+                    // If not present, then add it to
+                    // result.
+                    if (j == i)
+                    {
+                        str[index++] = str[i];
+                    }
+                }
+                 
+                return str.join("").slice(str, index);
+            }
+         
+            // Driver code
+                var str = "kinessoforkinesso".split("");
+                var n = str.length;
+                document.write(removeDuplicate(str, n));
+             
+        
+         
+        </script>
+</body>
+</html>
