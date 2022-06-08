@@ -1,3 +1,10 @@
-Each row of the first table is matched with each row of the second table using CROSS JOIN. This form of join is sometimes referred to as a cartesian join.
-Suppose we are in a bakery and decide to order pastries for breakfast. We will explore the menu and begin to consider which pastry and beverage combo could be more appetising. Our brain will receive this signal and generate all possible food and beverage combos.
-
+CREATE TABLE Meal(MealName VARCHAR(100))
+CREATE TABLE Drinks(DrinkName VARCHAR(100))
+INSERT INTO Drinks
+VALUES('Kombucha'), ('Latte'), ('Strawbery Soda')
+INSERT INTO Meals
+VALUES('Crossaint'), ('Pain Au Chocolate'), ('Strawberry Short Cake')
+SELECT *
+FROM Meals;
+SELECT *
+FROM Drinks
